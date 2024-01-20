@@ -8,7 +8,7 @@ app = Flask(__name__)
 def stress_cpu():
     try:
         # Start the CPU stress script in a non-blocking manner
-        subprocess.Popen(['python', 'stress_cpu.py'])
+        subprocess.Popen(['python3', 'stress_cpu.py'])
         return 'CPU stress process started.', 200
     except Exception as e:
         return str(e), 500
