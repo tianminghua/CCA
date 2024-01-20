@@ -18,7 +18,7 @@ def get_private_ip():
     try:
         hostname = socket.gethostname()
         private_ip = socket.gethostbyname(hostname)
-        return private_ip
+        return private_ip, 200
     except Exception as e:
         return str(e), 500
 
